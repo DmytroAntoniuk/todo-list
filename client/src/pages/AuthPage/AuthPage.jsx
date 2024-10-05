@@ -25,7 +25,7 @@ const LoginPage = () => {
             <button className="waves-effect waves-light btn blue">
               Увійти
             </button>
-            <Link to="/" className="btn-outline btn-reg">
+            <Link to="/registration" className="btn-outline btn-reg">
               Немає акаунта ?
             </Link>
           </div>
