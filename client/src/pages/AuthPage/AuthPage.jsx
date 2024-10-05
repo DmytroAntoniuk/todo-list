@@ -1,6 +1,7 @@
 import React from "react";
 import "./AuthPage.scss";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 const LoginPage = () => {
   return (
@@ -67,13 +68,11 @@ const RegistrationPage = () => {
 };
 
 const AuthPage = () => {
-  const location = useLocation();
   return (
-    <div className="container">
-      <div className="auth-page">
-        {location.pathname === "/login" ? <LoginPage /> : <RegistrationPage />}
-      </div>
-    </div>
+    <Routes>
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/registration" element={<RegistrationPage />} />
+    </Routes>
   );
 };
 
